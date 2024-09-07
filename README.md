@@ -3,6 +3,25 @@
 ![greenatom](https://avatars.mds.yandex.net/i?id=1891506b218b46016d31557cbea846a5_l-5468635-images-thumbs&n=13)
 
 ---
+
+## Task
+
+Implement a microservice that will act as a repository of various files and their attributes.
+
+The microservice should provide HTTP API and receive/receive requests/responses in JSON format.
+
+The development of UI-interface is not required. Postman or an analog can be used for testing.
+
+The following API methods should be implemented:
+
+1. File creation.
+
+JSON including the file (in base64 format) and its attributes (title - title, date and time of sending - creation_date, brief description of the document - description) is sent to the method as input, the method returns the id of the created file.
+
+2. Receiving a file.
+
+The id of the file is sent to the input of the method, the output of the method returns JSON, which includes the file (in base64 format) and its attributes (title - title, date and time of sending - creation_date, brief description of the document - description).
+
 ## Stack technologies
 
 - Java SE 17
