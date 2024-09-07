@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/greenatom
+            - SPRING_DATASOURCE_USERNAME=postgres
+            - SPRING_DATASOURCE_PASSWORD=root
+        depends_on:
+            - db
+        ports:
+            - "8080:8080"
+
+    db:
+        image: postgres:latest
+        environment:
+            POSTGRES_DB: greenatom
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: root
+        ports:
+            - "5432:5432"
+
+    tests:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: mvn test
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/greenatom
+            - SPRING_DATASOURCE_USERNAME=postgres
+            - SPRING_DATASOURCE_PASSWORD=root
+        depends_on:
+            - db
