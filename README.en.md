@@ -22,6 +22,17 @@ JSON including the file (in base64 format) and its attributes (title - title, da
 
 The id of the file is sent to the input of the method, the output of the method returns JSON, which includes the file (in base64 format) and its attributes (title - title, date and time of sending - creation_date, brief description of the document - description).
 
+## Problem Solution
+
+An application has been developed that allows reading, creating and deleting files using PostgreSQL database.
+A table named t_file is created and stores:
+- File name
+- File description
+- Date of file creation
+- File
+
+Base64 encoding standard is used to save the file in the database
+
 ## Stack technologies
 
 - Java SE 17
