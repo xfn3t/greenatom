@@ -1,13 +1,9 @@
 # Project for Green Atom
 
----
-
 ![greenatom](https://avatars.mds.yandex.net/i?id=1891506b218b46016d31557cbea846a5_l-5468635-images-thumbs&n=13)
 
 ---
 ## Stack technologies
-
----
 
 - Java SE 17
 - Spring/Spring boot 3.x
@@ -22,7 +18,6 @@
 
 ## Start project
 
----
 
 ```shell
 docker-compose up --build
@@ -31,8 +26,6 @@ docker-compose up --build
 ---
 
 ## Base endpoints
-
----
 
 ### GET /
 
